@@ -8,7 +8,7 @@
 #include "hardware/timer.h"
 #include "hardware/watchdog.h"
 #include "hardware/clocks.h"
-
+#include "SomeHeader.hpp"
 // SPI Defines
 // We are going to use SPI 0, and allocate it to the following GPIO pins
 // Pins can be changed, see the GPIO function select table in the datasheet for information on GPIO assignments
@@ -50,10 +50,11 @@ int64_t alarm_callback(alarm_id_t id, void *user_data) {
 
 
 
-
+Static NotARailGun::Data temp;
 
 int main()
 {
+    temp.variable = 0;
     stdio_init_all();
 
     // SPI initialisation. This example will use SPI at 1MHz.
