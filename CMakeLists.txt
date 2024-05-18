@@ -38,8 +38,8 @@ project(NotARailGun C CXX ASM)
 pico_sdk_init()
 
 # Add executable. Default name is the project name, version 0.1
-
-add_executable(NotARailGun src/NotARailGun.cpp )
+file(GLOB SOURCES "src/*.cpp")
+add_executable(NotARailGun ${SOURCES})
 
 pico_set_program_name(NotARailGun "NotARailGun")
 pico_set_program_version(NotARailGun "0.1")
