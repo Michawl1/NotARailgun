@@ -39,7 +39,7 @@ pico_sdk_init()
 
 # Add executable. Default name is the project name, version 0.1
 
-add_executable(NotARailGun NotARailGun.cpp )
+add_executable(NotARailGun src/NotARailGun.cpp )
 
 pico_set_program_name(NotARailGun "NotARailGun")
 pico_set_program_version(NotARailGun "0.1")
